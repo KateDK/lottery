@@ -16,7 +16,6 @@ class Lottery extends React.Component{
 
 
   drawBalls = (props) => {
-    console.log('yo');
     const {numBalls,maxNum} = this.props;
     const balls = [];
     for(let i = 1; i <= numBalls; i++){
