@@ -1,4 +1,5 @@
 import React from 'react';
+import Ball from './Ball';
 
 class Lottery extends React.Component{
   state ={
@@ -25,10 +26,11 @@ class Lottery extends React.Component{
 
   render(){
     const {title} = this.props;
+    const {balls} = this.state;
     return (
       <div>
         <h1>{title}</h1>
-
+        {balls.map(ball => <Ball num={ball} key={ball+Math.random()}/>)}
         <button onClick={this.drawBalls}>generate</button>
       </div>
     )
