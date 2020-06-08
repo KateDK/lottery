@@ -28,10 +28,12 @@ class Lottery extends React.Component{
     const {title} = this.props;
     const {balls} = this.state;
     return (
-      <div>
+      <div className='Lottery'>
         <h1>{title}</h1>
-        {balls.map(ball => <Ball num={ball} key={ball+Math.random()}/>)}
-        <button onClick={this.drawBalls}>generate</button>
+        <div className="Lottery_balls">
+          {balls.map(ball => <Ball num={ball} key={ball+Math.random()}/>)}
+        </div>
+        <button className='Lottery_button' onClick={this.drawBalls}>generate</button>
       </div>
     )
   }
