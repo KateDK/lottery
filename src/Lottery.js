@@ -1,5 +1,7 @@
 import React from 'react';
 import Ball from './Ball';
+import './Lottery.css';
+
 
 class Lottery extends React.Component{
   state ={
